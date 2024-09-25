@@ -6,6 +6,7 @@ This project is part of the Udacity AI Programming with Python Nanodegree, focus
 
 
 
+
 ### Key Files:
 - **train.py**: Script to train the image classifier.
 - **predict.py**: Script to use the trained model for predictions.
@@ -36,9 +37,10 @@ You can install these dependencies using:
 ```bash
 pip install torch torchvision pillow matplotlib numpy
 
- 
 
 Training the Model
+
+
 To train the model, run the following command:
 python train.py --data_dir <path_to_data> --save_dir <path_to_save_checkpoint> --arch <model_name> --learning_rate <lr> --hidden_units <units> --epochs <epochs> --gpu
 
