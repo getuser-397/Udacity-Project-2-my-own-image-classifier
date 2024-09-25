@@ -5,6 +5,7 @@ This project is part of the Udacity AI Programming with Python Nanodegree, focus
 ## Repository Structure
 
 
+
 ### Key Files:
 - **train.py**: Script to train the image classifier.
 - **predict.py**: Script to use the trained model for predictions.
@@ -34,13 +35,14 @@ You can install these dependencies using:
 
 ```bash
 pip install torch torchvision pillow matplotlib numpy
- 
-Training
 
+ 
+
+Training the Model
 To train the model, run the following command:
 python train.py --data_dir <path_to_data> --save_dir <path_to_save_checkpoint> --arch <model_name> --learning_rate <lr> --hidden_units <units> --epochs <epochs> --gpu
 
- Exemple
+Example:
 python train.py --data_dir ./flowers --save_dir ./checkpoints --arch vgg16 --learning_rate 0.001 --hidden_units 512 --epochs 20 --gpu
 
 --data_dir: Path to the dataset (flowers directory).
@@ -50,11 +52,15 @@ python train.py --data_dir ./flowers --save_dir ./checkpoints --arch vgg16 --lea
 --hidden_units: Number of hidden units in the classifier.
 --epochs: Number of training epochs.
 --gpu: Use GPU for training if available.
+
+
 Making Predictions
 To make predictions using the trained model, run:
 python predict.py --image_path <image_path> --checkpoint <checkpoint_path> --top_k <K> --category_names <json_file> --gpu
-exemple
+
+Example:
 python predict.py --image_path ./flowers/test/1/image_06752.jpg --checkpoint ./checkpoints/checkpoint.pth --top_k 5 --category_names cat_to_name.json --gpu
+
 
 --image_path: Path to the image to be classified.
 --checkpoint: Path to the model checkpoint.
@@ -76,5 +82,3 @@ The model used for training is based on a pre-trained network (e.g., VGG16 or Re
 Acknowledgements
 This project is part of the Udacity AI Programming with Python Nanodegree.
 The dataset used is the 102 Flower Categories dataset provided by the University of Oxford.
-
-
